@@ -32,9 +32,7 @@ const showWinner = (userWin, userChoice, compChoice) => {
     }
 }; 
 const playGame = (userChoice) => {
-    console.log("user-choice = ", userChoice);
     const compChoice = genCompChoice();
-    console.log("comp-choice = ", compChoice);
 
     if(userChoice === compChoice){
         drawGame();
@@ -58,7 +56,6 @@ const playGame = (userChoice) => {
 choices.forEach((choice) => {
     choice.addEventListener("click", () => {
         const userChoice = choice.getAttribute("id")
-        console.log("choice was clicked", userChoice);
         playGame(userChoice);
     });
 });
